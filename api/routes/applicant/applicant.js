@@ -3,49 +3,8 @@ const router = express.Router()
 const mongoose = require('mongoose')
 const Applicant = require("../../models/applicant/applicant")
 
-const path = require('path');
-const crypto = require('crypto');
-const multer = require('multer');
-const GridFsStorage = require('multer-gridfs-storage');
-const Grid = require('gridfs-stream');
 
 
-
-// const mongoURI = 'mongodb+srv://hatim:hatim@cluster0.f7or37n.mongodb.net/?retryWrites=true&w=majority';
-// const conn = mongoose.createConnection(mongoURI);
-// let gfs;
-
-// conn.once('open', () => {
-//   // Init stream
-//   gfs = Grid(conn.db, mongoose.mongo);
-//   gfs.collection('uploads');
-// });
-
-// // Create storage engine
-// const storage = new GridFsStorage({
-//   url: mongoURI,
-//   file: (req, file) => {
-//     return new Promise((resolve, reject) => {
-//       crypto.randomBytes(16, (err, buf) => {
-//         if (err) {
-//           return reject(err);
-//         }
-//         const filename = buf.toString('hex') + path.extname(file.originalname);
-//         const fileInfo = {
-//           filename: filename,
-//           bucketName: 'uploads'
-//         };
-//         resolve(fileInfo);
-//       });
-//     });
-//   }
-// });
-// const upload = multer({ storage });
-
-// app.post('/upload', upload.single('file'), (req, res) => {
-//     res.json({ file: req.file });
-//     res.redirect('/');
-//   });
 router.get('/login', (req, res) => {
     res.render("applicant/login")
 })
