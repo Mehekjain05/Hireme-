@@ -33,9 +33,22 @@ txt2=''.join(keywords[0])
 # print(type(txt2))
 # print(keywords)
 print(txt2)
-common_words=(set(txt2)&set(txt))
+# common_words=(set(txt2)&set(txt))
 # print(common_words)
 
-print(txt)
+def common_words_filter(my_string_1, my_string_2):
+    my_word_count = {}
+
+    for word in my_string_1.split():
+        my_word_count[word] = my_word_count.get(word, 0) + 1
+
+    for word in my_string_2.split():
+        my_word_count[word] = my_word_count.get(word, 0) + 1
+
+    return [word for word in my_word_count if my_word_count[word] == 1]
+
+
+print("Common: \n",common_words_filter(txt, txt2))
+# print(txt)
 
 
