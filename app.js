@@ -9,6 +9,7 @@ const port = process.env.PORT;
 const app = express();
 
 const applRoute = require("./api/routes/applicant/applicant");
+const recRoute = require("./api/routes/recruiter/recruiter");
 
 
 
@@ -44,6 +45,7 @@ app.use("/components", express.static(__dirname + "public/components"));
 app.use("/uploads", express.static(__dirname + "public/uploads"));
 
 app.use("/applicant", applRoute);
+app.use("/recruiter", recRoute);
 
 const server = http.createServer(app);
 server.listen(port, () => {
