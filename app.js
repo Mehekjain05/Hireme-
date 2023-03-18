@@ -10,6 +10,8 @@ const app = express();
 
 const applRoute = require("./api/routes/applicant/applicant");
 const recRoute = require("./api/routes/recruiter/recruiter");
+const homeRoute = require("./api/routes/start");
+
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -44,6 +46,8 @@ app.use("/uploads", express.static(__dirname + "public/uploads"));
 
 app.use("/applicant", applRoute);
 app.use("/recruiter", recRoute);
+app.use("/", homeRoute);
+
 
 const server = http.createServer(app);
 server.listen(port, () => {
