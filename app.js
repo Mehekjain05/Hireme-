@@ -13,8 +13,6 @@ const recRoute = require("./api/routes/recruiter/recruiter");
 const homeRoute = require("./api/routes/start");
 
 
-
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 

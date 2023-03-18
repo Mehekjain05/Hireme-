@@ -4,14 +4,21 @@ const mongoose = require('mongoose')
 const Applicant = require("../../models/applicant/applicant")
 
 
+
 router.get('/login', (req, res) => {
     res.render("applicant/login")
 })
 
-router.get('/step1', (req, res) => {
-    res.render("applicant/steps/step1")
+router.get('/step1/(:type)', (req, res) => {
+    if(req.params.type == 'user'){
+        res.render("applicant/steps/step1")
+    }
+    else{
+        res.send("Resgister Recruiter!!!")
+    }
 })
-router.post('/step2', async(req, res) => {
+
+router.post('/step1', async(req, res) => {
     const user = new Applicant({
         _id: new mongoose.Types.ObjectId(),
         email: req.body.email,
@@ -29,10 +36,6 @@ router.get('/step2', (req, res) => {
 
 router.get('/step3', (req, res) => {
     res.render("applicant/steps/step3")
-})
-
-router.get('/register', async(req, res) => {
-    res.render("applicant/login")
 })
 
 
