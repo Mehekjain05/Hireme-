@@ -1,0 +1,273 @@
+:root {
+    --bg-dark: #1e686dfa;
+    --fs-025: .25rem;
+    --fs-050: .5rem;
+    --fs-075: .75rem;
+    --fs-085: .85rem;
+    --fs-100: 1rem;
+    --fs-110: 1.1rem;
+    --fs-125: 1.25rem;
+    --fs-150: 1.5rem;
+}
+
+body {
+    font-family: Okra, Helvetica, sans-serif;
+    width: 100%;
+    padding: 0;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+.card {
+    border: none;
+}
+
+
+/* PRODUCTS CARD NAV */
+
+#navLeft {
+    left: 0px;
+    padding-left: 6px;
+    padding-right: 1.2rem;
+}
+
+#navRight {
+    right: 0px;
+    padding-right: 6px;
+    padding-left: 1.2rem;
+}
+
+#navLeft,
+#navRight {
+    box-shadow: none;
+    position: absolute;
+    top: 15%;
+    display: none;
+    color: var(--bg-dark);
+}
+
+#nav-tab {
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.nav-tabs .nav-link {
+    border: none;
+    margin-bottom: -4px;
+    min-width: max-content;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    border: 3px solid;
+    border-color: transparent transparent var(--bg-dark);
+}
+
+#nav-tab .nav-link {
+    color: var(--bg-dark);
+}
+
+
+/* PRODUCT */
+
+#searchDiv i {
+    color: dimgray;
+}
+
+#searchDiv input {
+    color: dimgray;
+    border: none;
+    padding: .375rem .75rem .375rem 0;
+}
+
+#searchDiv input:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.btn-outline-secondary {
+    color: #6c757d;
+    border-color: #ced4da
+}
+
+.btn-outline-secondary:hover {
+    color: #fff;
+    background-color: #ced4da;
+    border-color: #ced4da
+}
+
+.btn-check:focus+.btn-outline-secondary,
+.btn-outline-secondary:focus {
+    box-shadow: none
+}
+
+.sortSelect {
+    border-radius: .25rem;
+    border: 1px solid #ced4da;
+}
+
+.sortSelect div {
+    background-color: #e5ebf1;
+    text-align: center;
+    line-height: 38px;
+    min-width: 57px;
+    font-size: var(--fs-075);
+    font-weight: bold;
+}
+
+.form-select,
+.form-select:focus {
+    box-shadow: none;
+    border: none;
+    background-position: right .5rem center;
+    background-size: 12px 10px;
+    padding-right: 1.3rem;
+    font-size: var(--fs-085);
+}
+
+.pro {
+    min-width: 175px;
+    max-width: 300px;
+    height: 350px;
+    padding-bottom: 0.75rem;
+    border: 1px solid #c7e6cb;
+    background-color: rgb(245, 245, 245);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+    position: relative;
+    display: block;
+}
+
+.pro .imgDiv {
+    background-color: white;
+    height: 65%;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 1rem 1rem 0px 0px;
+    transition: ease-in-out .3s;
+}
+
+.pro .imgDiv:hover {
+    transition: ease-in-out .3s;
+    padding: 0;
+}
+
+.pro .imgDiv .prodDiscount {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    background-color: #0b8f46;
+    position: absolute;
+    padding: 0.2rem;
+    padding-right: 0.4rem;
+    border-radius: 0 10px 10px 0;
+    left: 0;
+    top: 0.9rem;
+    line-height: 1.1;
+}
+
+.pro .imgDiv .prodDiscount::after {
+    content: '% off';
+}
+
+.pro .fa-heart {
+    position: absolute;
+    top: 10px;
+    right: 0.7rem;
+    font-size: 1.5rem;
+    color: rgb(212, 209, 209);
+    transition: all 0.5s;
+}
+
+.pro .i-red {
+    color: red;
+}
+
+.pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.pro img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 1rem 0px 0px;
+    /* object-fit: fill; */
+    object-fit: contain;
+}
+
+.pro .des .prodCat {
+    font-size: var(--fs-075);
+    color: dimgray;
+}
+
+.pro .des .prodName {
+    font-weight: bold;
+    font-size: .95rem;
+    margin-bottom: 0.2rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.pro .des .prodRating {
+    font-size: var(--fs-085);
+    color: #808719;
+}
+
+.prodPrice {
+    font-family: sans-serif;
+    color: rgb(39, 168, 168);
+    font-size: var(--fs-110);
+    font-weight: bold;
+}
+
+.discPrice {
+    font-family: sans-serif;
+    font-size: .75rem;
+    text-decoration: line-through;
+}
+
+.prodPrice::before,
+.discPrice::before {
+    content: '₹';
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: var(--bg-dark);
+    background-color: #1e686d60;
+    border-color: var(--bg-dark)
+}
+
+.page-item .page-link {
+    color: var(--bg-dark);
+}
+
+
+/* FILTER MODAL */
+
+@media screen and (min-width: 576px) {
+    #modal-content-filter {
+        height: 90vh;
+    }
+}
+
+@media screen and (max-width: 431px) {
+     :root {
+        --fs-025: .2rem;
+        --fs-050: .4rem;
+        --fs-075: .7rem;
+        --fs-085: .75rem;
+        --fs-100: 0.85rem;
+        --fs-110: 1rem;
+        --fs-125: 1.1rem;
+        --fs-150: 1.35rem;
+    }
+    .card-body {
+        padding: 0.1rem;
+    }
+}

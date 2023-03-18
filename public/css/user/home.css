@@ -1,0 +1,549 @@
+:root {
+    --bg-dark: #1e686dfa;
+}
+
+body {
+    font-family: Okra, Helvetica, sans-serif;
+    width: 100%;
+    padding: 0;
+    min-height: 100vh;
+    transition: all 0.3s;
+    background-color: #f4ecec;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    background-color: var(--bg-dark);
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 50%);
+}
+
+#BrandLogo {
+    width: 45px;
+    height: 45px;
+}
+
+#navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.nav-link,
+.nav-link:focus {
+    color: white;
+    transition: transform .2s;
+}
+
+.nav-link:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+.navbar-collapse.collapsing,
+.navbar-collapse.show {
+    padding-top: 1rem;
+}
+
+.offcanvas {
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.offcanvas-header {
+    border-radius: .5rem 0 0 0;
+    background-color: rgba(226, 226, 226, 0.705);
+}
+
+.btn-close:hover {
+    transform: scale(1.1);
+}
+
+.btn-close:focus {
+    box-shadow: none;
+}
+
+.offcanvas .nav-link,
+.offcanvas .nav-link:focus {
+    color: rgb(0, 0, 0);
+    transition: transform .2s;
+    border-bottom: 1px solid rgba(226, 226, 226, 0.705);
+    ;
+}
+
+.offcanvas .nav-link:hover {
+    color: rgb(0, 0, 0);
+    transform: none;
+    border-radius: .5rem;
+    color: var(--bg-dark);
+    transform: scale(1.05);
+}
+
+.offcanvas-body {
+    padding: 0 1rem;
+}
+
+.offcanvas .accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.offcanvas .accordion-button:not(.collapsed) {
+    color: inherit;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+
+/* BANNER */
+
+.banner {
+    height: 400px;
+    width: 100%;
+    text-align: center;
+    padding-top: 50px;
+    color: white;
+    overflow: visible;
+    background: rgba(99, 139, 139, 0.8);
+    background: linear-gradient(rgba(24, 3, 24, 0.8), rgba(99, 139, 139, 0.8)), url("/img/home-banner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 50%);
+}
+
+.banner h1 {
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 4rem;
+}
+
+.search-wrapper {
+    width: 40%;
+    min-width: 326px;
+    max-width: 500px;
+    position: relative;
+}
+
+.search-container input {
+    border-radius: 10px 0 0 10px;
+    min-width: 200px;
+}
+
+.search-container input:focus,
+.search-container select:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: white;
+}
+
+.search-container .btn,
+.search-container .btn:active {
+    border-radius: 0px 10px 10px 0px;
+    color: white;
+    border-color: white;
+    box-shadow: none;
+    outline: none;
+}
+
+.search-container .btn:hover {
+    color: white;
+    background-color: black;
+    border-color: black;
+}
+
+#search-results {
+    position: absolute;
+    z-index: 99;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 0 0 10px 10px;
+    width: 100%;
+    max-width: 542px;
+    display: none;
+    text-align: left;
+}
+
+#search-results ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-top: .25rem;
+    padding-bottom: .25rem;
+    display: none;
+}
+
+.suggestion-title {
+    padding-left: 1rem;
+    font-size: .8rem;
+    font-weight: 600;
+    color: dimgray;
+    margin-bottom: .2rem;
+    background-color: rgb(230, 228, 228);
+}
+
+#search-results li {
+    padding-left: 1rem;
+    color: dimgray;
+    cursor: pointer;
+    margin: .25rem;
+    border-radius: .35rem;
+}
+
+#search-results li span {
+    float: right;
+    margin-right: .5rem;
+    font-size: .7rem;
+    line-height: 24px;
+}
+
+#search-results li:hover {
+    background-color: #e8f9fafa;
+    color: #1e686dfa;
+}
+
+
+/* END OF BANNER */
+
+
+/* SWIPER CONFIG */
+
+.swiper {
+    width: 98%;
+    height: 350px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.slide-container {
+    max-width: 1250px;
+    width: 100%;
+}
+
+.slide-content {
+    overflow: hidden;
+}
+
+
+/* END OF SWIPER CONFIG */
+
+
+/* CATEGORY SWIPER */
+
+.categorySwiper {
+    height: 180px;
+}
+
+#category1 .cat {
+    min-width: 150px;
+    min-height: 100px;
+    padding-bottom: 0.75rem;
+    position: relative;
+    display: block;
+}
+
+#category1 .cat .imgDiv {
+    background-color: transparent;
+    height: 80%;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 1.5rem 1.5rem 0px 0px;
+}
+
+#category1 .cat img {
+    height: 100%;
+    /* object-fit: contain; */
+    aspect-ratio: 1 / 1;
+    cursor: pointer;
+}
+
+#category1 .cat .des a {
+    color: inherit;
+    text-decoration: none;
+}
+
+#category1 .cat .des p {
+    font-size: 1.1rem;
+}
+
+
+/* END OF CATEGORY SWIPER */
+
+
+/* SELLER SWIPER */
+
+.sellerSwiper {
+    height: 240px;
+}
+
+#seller1 .sel {
+    min-width: 150px;
+    min-height: 250px;
+    padding-bottom: 0.75rem;
+    position: relative;
+    display: block;
+}
+
+#seller1 .sel .imgDiv {
+    background-color: transparent;
+    height: 60%;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 1.5rem 1.5rem 0px 0px;
+}
+
+#seller1 .sel img {
+    height: 100%;
+    /* object-fit: contain; */
+    aspect-ratio: 1 / 1;
+    box-shadow: 1px 1px 1px #35363636;
+    cursor: pointer;
+}
+
+#seller1 .sel .des .selCat {
+    font-size: .9rem;
+}
+
+#seller1 .sel .des a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* END OF SELLER SWIPER */
+
+
+/* PRODUCT SWIPER */
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: black;
+    padding: 2.5rem 1.1rem;
+    top: 46%;
+}
+
+.swiper-button-prev {
+    left: 0;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.swiper-button-next {
+    right: 0;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+    background-color: white;
+    box-shadow: 0 0.125rem 0.675rem rgb(0 0 0 / 50%);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    content: '';
+}
+
+#product1 .pro {
+    min-width: 150px;
+    min-height: 350px;
+    padding-bottom: 0.75rem;
+    border: 1px solid #c7e6cb;
+    background-color: rgb(245, 245, 245);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+    position: relative;
+    display: block;
+}
+
+#product1 .pro .imgDiv {
+    background-color: white;
+    height: 65%;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 1rem 1rem 0px 0px;
+    transition: ease-in-out .3s;
+}
+
+#product1 .pro .imgDiv:hover {
+    transition: ease-in-out .3s;
+    padding: 0;
+}
+
+#product1 .pro .imgDiv .prodDiscount {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    background-color: #0b8f46;
+    position: absolute;
+    padding: 0.2rem;
+    padding-right: 0.4rem;
+    border-radius: 0 10px 10px 0;
+    left: 0;
+    top: 0.9rem;
+    line-height: 1.1;
+}
+
+.pro .imgDiv .prodDiscount::after {
+    content: '% off';
+}
+
+#product1 .pro:hover .fa-heart {
+    top: 10px;
+}
+
+#product1 .pro .fa-heart {
+    position: absolute;
+    top: -50px;
+    right: 0.7rem;
+    font-size: 25px;
+    color: rgb(212, 209, 209);
+    transition: all 0.5s;
+}
+
+#product1 .pro .i-red {
+    color: red;
+}
+
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+#product1 .pro img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 1rem 0px 0px;
+    /* object-fit: fill; */
+    object-fit: contain;
+}
+
+#product1 .pro .des .prodRating {
+    font-size: 0.8rem;
+    color: #808719;
+    margin-bottom: .25rem;
+}
+
+#product1 .pro .des .prodName {
+    font-size: .95rem;
+    font-weight: bold;
+    margin-bottom: .2rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+#product1 .pro .des .prodCat {
+    font-size: .75rem;
+    color: dimgray;
+}
+
+.prodPrice {
+    font-family: sans-serif;
+    color: rgb(39, 168, 168);
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
+.discPrice {
+    font-family: sans-serif;
+    font-size: 0.78rem;
+    text-decoration: line-through;
+}
+
+.prodPrice::before,
+.discPrice::before {
+    content: '₹';
+}
+
+.headline h2::before {
+    content: '';
+    width: 40%;
+    height: 0.2rem;
+    background-color: #1e686dfa;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.1rem;
+}
+
+.btn-main {
+    color: #fff;
+    background-color: #1e686dfa;
+    border-color: #000;
+    padding: 6px 24px 6px 24px;
+}
+
+.btn-main:hover {
+    color: #fff;
+    background-color: #000;
+    border-color: #fff;
+}
+
+.float-img-btn {
+    position: absolute;
+    right: 0;
+    margin: 0px 4px 4px 4px;
+}
+
+.value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    text-align: center;
+    vertical-align: middle;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.value-button:hover {
+    cursor: pointer;
+}
+
+.value-input {
+    text-align: center;
+    border: none;
+    font-size: 12px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 30px;
+}
+
+.inc-btn {
+    margin-right: -4px;
+    border-radius: 8px 0 0 8px;
+}
+
+.dec-btn {
+    margin-left: -4px;
+    border-radius: 0 8px 8px 0;
+}
+
+
+/* END OF PRODUCT SWIPER */
