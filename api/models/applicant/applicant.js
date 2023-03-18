@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 const applSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
-    name: { type: String, required: true },
+    username: { type: String, required: true },
     email: { type: String, required: true },
     pass: { type: String, required: true },
-    busGstFile: { type: String, required: true },
+    Resumepdf: { type: String, required: false },
     mobile: { type: Number, required: true },
 })
-const Appl = new mongoose.model("Admin", applSchema)
+const Appl = new mongoose.model("Applicant", applSchema)
 module.exports = Appl;

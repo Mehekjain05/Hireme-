@@ -127,30 +127,31 @@
             crossorigin="anonymous"></script>
         
         <main>
+            <form method="post">
             <h1>Register Yourself</h1><br><br><br>
             <section>
-                <form>
+                
                     <div class="step1">
-                        <label for="name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your full name"
+                        <label for="name" class="form-label">UserName</label>
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Enter your full name"
                             style="border-color: purple;">
                     </div>
                     <div class="step1">
                         <label for="email" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="email" placeholder="Enter your email address"
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter your email address"
                             style="border-color: purple;">
                     </div>
                     <div class="step1">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter a password"
+                        <input type="password" class="form-control" name="pass" id="password" placeholder="Enter a password"
                             style="border-color:        purple;">
                     </div>
                     <div class="step1">
                         <label for="number" class="form-label">Phone Number</label>
-                        <input type="number" class="form-control" id="number" placeholder="Enter your number"
+                        <input type="number" class="form-control" name="mob" id="number" placeholder="Enter your number"
                             style="border-color: purple">
                     </div>
-                </form>
+                
             </section>
             <section style="margin-top:20px;">
                 <div class="container">
@@ -168,6 +169,7 @@
                     </div>
                 </div>
             </section>
+        </form>
         </main>
     </div>
     <footer></footer>
