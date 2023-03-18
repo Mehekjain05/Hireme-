@@ -1,0 +1,107 @@
+VEDANT KAMBLI
+SOLUTIONS EXPERT
+Contact
+ExpertisePhone
+Email+91 9372571301
+kamblivedant50@gmail.com
+Java
+C++
+Machine Learning
+Cloud Computing
+Deep learning
+Team
+managementAbout Me
+I am a highly curious individual who possesses a passion for
+finding solutions to complex problems. With a keen eye for
+detail and a desire to always keep learning, I am confident in
+my ability to find the root cause of any issue and develop a
+practical solution around it. I have a love for projects and
+reverse engineering that challenge me to think outside of the
+box that enable me to push my boundaries of knowledge and
+skills.
+C
+Problem solvingDjango
+Drone
+programming
+Reverse
+EngineeringMain Achievements
+The Agro Drone project focused on collecting and
+analysing data from farmlands and generating useful
+information for farmers. It contained 4 main parts :
+Web UI, deep learning module, drone programming and
+IoT module. The project was implemented using the micro-
+services architecture.Agro Drone Project
+Action packed animation made using blender 3D.
+Key elements of this project were modelling, rigging, texturing
+and animating the whole scene. The background was also
+modelled manually.Car Chase
+Blender 3D
+DJS ACM SiGAI
+VCP creativeTeam Leader
+CiiA Exhibition
+Selected in the top 100 projects out of 700 applications
+Nation-wide.
+The Rotary Club of Mumbai, in partnership with Warshall,
+sponsored the CiiA exhibition at the Nehru Planetarium, which
+showcased a diverse range of projects from school-level to
+start-ups. Among them was our upgraded Agro Drone, which
+received high praise from visitors and judges alike.Selected as the VCP creative of AI/ML's Student chapter.Computer Vision
+IoTLinkedIn
+https://www.linkedin.com/in/vedant-kambli/Internships
+ NCIT
+Worked in NCIT as an intern -
+Executive in application support.
+ A-1 Fencing
+worked in drone project as a
+consultant.
+Education
+Pursuing Bachelor's Degree in
+AI/ML (2022-2025)Dwarkadas J Sanghvi College of
+Engineering
+Information Technology
+(92.20%)Shri Bhaghubhai Mafatlal
+PolytechnicProjects
+BMI Health Calculator
+(Java Mini Project)
+Authored and Designed
+'Symbian Tales' Newsletter Face Recognition System
+Using python and OpenCV
+Shopping cart inventory using
+Computer Vision
+(Made using Python and OpenCV)Object Detection using Deep
+Learning
+(Part of the Agro Drone Project)
+Yolo Algorithm
+2nd in Ignite IT Quiz
+competitionCertifications
+Machine learning, Data science and
+deep learning in python.
+Ethical hacking and penetration
+testing.
+Complete Python bootcamp from zero
+to hero.
+Complete Django 3 - Full stack
+development with python web Dev.
+Blender 3D (Modelling, Texturing and
+Animation)Research Paper
+Summarizer
+6- hour datathon- by init.AI
+Secure Eye
+A surveillance system to
+ detect theft. (IoT/Drone based
+project)
+Competitions
+Clash of codes
+Data2Knowledge
+Ideathon
+TechnoPro
+National level paper and project
+presentation competition.
+CiiA Exhibition       (Offline mode)
+       (Offline mode)
+       (1st Place)
+       (4th Place)
+       (2nd Place)
+       (Organized at Nehru Planetarium)
+       (Team selected in top 100 out of     .
+ .      700 teams (Nation-Wide))
