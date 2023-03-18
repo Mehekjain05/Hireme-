@@ -164,9 +164,9 @@
         <form action="/recruiter/login" method="post">
             <h2>Login</h2>
             <label>Type of User : </label>
-            <label class="toggle">
-                <input type="checkbox">
-                <span class="labels" data-on="User" data-off="Recruitor"></span>
+            <label class="toggle" >
+                <input type="checkbox" name="toggle" id="toggle">
+                <span class="labels"  data-on="User" data-off="Recruitor"></span>
             </label>
             <div class="form-group">
                 <label for="username">Username</label>
@@ -189,5 +189,8 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 </body>
+<script>
+    var a = document.getElementById("toggle").textContent;
+</script>
 
 </html>

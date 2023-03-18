@@ -4,6 +4,7 @@ const applSchema = mongoose.Schema({
     name: { type: String, required: true },
     email: { type: String, required: true },
     pass: { type: String, required: true },
+    busGstFile: { type: String, required: true },
     mobile: { type: Number, required: true },
 })
 const Appl = new mongoose.model("Admin", applSchema)
