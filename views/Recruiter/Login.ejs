@@ -105,7 +105,7 @@
         <form action="/recruiter/login" method="post">
             <h2>Login</h2>
             <label>Type of User : </label>
-            <select id="cars" name="cars">
+            <select name="toggle" id="toggle">
                 <option value="user">Applicant</option>
                 <option value="recruitor">Recruitor</option>
             </select>
@@ -123,7 +123,7 @@
                 <a href="#">Forgot password?</a>
             </div>
             <div class="signup-link">
-                Don't have an account? <a href="/applicant/step1">Sign up</a>
+                Don't have an account? <a onclick="go()">Sign up</a>
             </div>
         </form>
     </div>
@@ -132,7 +132,12 @@
         crossorigin="anonymous"></script>
 </body>
 <script>
-    var a = document.getElementById("toggle").textContent;
+function go(){
+    var value = document.getElementById("toggle").value;
+    console.log(value)
+    location.href="/applicant/step1/" + value
+}
+
 </script>
 
 </html>

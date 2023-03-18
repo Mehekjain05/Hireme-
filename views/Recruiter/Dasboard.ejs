@@ -579,7 +579,7 @@
     <header>
 
         <div class="logosec">
-            <div class="logo">Welcome Back, Mehek 🖐</div>
+            <div class="logo">Welcome Back, <%=name %> 🖐</div>
             <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
                 class="icn menuicn" id="menuicn" alt="menu-icon">
         </div>
@@ -607,10 +607,13 @@
                         <h5> Settings</h5>
                     </div>
 
-                    <div class="nav-option logout">
+                    <div class="nav-option logout" >
                         <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
-                            class="nav-img" alt="logout">
-                        <h5>Logout</h5>
+                        class="nav-img" alt="logout">
+                        <a href="/recruiter/logout" style="color: black; text-decoration:none;">
+                            <h5>Logout</h5>
+                        </a>
+                        
                     </div>
 
                 </div>

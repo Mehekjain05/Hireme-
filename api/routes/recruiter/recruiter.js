@@ -21,9 +21,7 @@ router.get('/login', async(req, res) => {
 })
 
 router.post('/login', async (req, res) => {
-    console.log(req.body.toggle)
-    
-    if(req.body.toggle == 'on'){
+    if(req.body.toggle == 'user'){
         var user = await Appl.find({ username: req.body.username})
         if (user.length < 1) {
             res.send({
@@ -37,7 +35,7 @@ router.post('/login', async (req, res) => {
                     res.send("dashboard!!!");
                 } else {
                     res.send({
-                        message: "Wrong Password",
+                        message: "User Not found please check your user type!!",
                     });
                 }
         }
@@ -50,7 +48,7 @@ router.post('/login', async (req, res) => {
             });
         } else {
                 if (req.body.pass == user[0].pass) {
-                    req.session.name = user[0].name;
+                    req.session.name = user[0].username;
                     req.session.email = user[0].email;
                     req.session.rec_id = user[0]._id;
                     res.redirect('dashboard');
@@ -65,9 +63,10 @@ router.post('/login', async (req, res) => {
 })
 
 router.get('/logout', (req, res) => {
-    res.redirect("Recruiter/login")})
+    res.redirect("/Recruiter/login")})
 
 router.get('/dashboard', (req, res) => {
-    res.render("Recruiter/Dasboard")})
+    res.render("Recruiter/Dasboard",{name: req.session.name})
+})
 
 module.exports = router
