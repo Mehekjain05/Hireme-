@@ -9,5 +9,7 @@ router.get('/login', (req, res) => {
     res.render("Recruiter/Login")
 })
 
+router.get('/dashboard', (req, res) => {
+    res.render("Recruiter/Dasboard")})
 
 module.exports = router
