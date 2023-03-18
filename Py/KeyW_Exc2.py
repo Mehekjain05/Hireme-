@@ -20,7 +20,7 @@ with open('C:\Vedant_\Projects\SmartHire\DATA\data.txt') as f:
 # keywords=""
 # keywords=data.values()
 keywords = list(data.values())
-# print(keywords)
+print(keywords)
 
 txt=""
 with open('C:\Vedant_\Projects\SmartHire\DATA\Data_Resume.txt') as f:
@@ -36,19 +36,28 @@ print(txt2)
 # common_words=(set(txt2)&set(txt))
 # print(common_words)
 
-def common_words_filter(my_string_1, my_string_2):
-    my_word_count = {}
+def common_words(string1, string2):
+    # Split strings into lists of words
+    words1 = string1.lower().split()
+    words2 = string2.lower().split()
 
-    for word in my_string_1.split():
-        my_word_count[word] = my_word_count.get(word, 0) + 1
+    # Create sets of unique words in each string
+    set1 = set(words1)
+    set2 = set(words2)
 
-    for word in my_string_2.split():
-        my_word_count[word] = my_word_count.get(word, 0) + 1
+    # Find the intersection of the two sets
+    common_set = set1.intersection(set2)
 
-    return [word for word in my_word_count if my_word_count[word] == 1]
+    # Convert the set back to a list
+    common_list = list(common_set)
+
+    return common_list
 
 
-print("Common: \n",common_words_filter(txt, txt2))
+print(type(txt))
+print(type(txt2))
+com_words=common_words(txt, txt2) #RETURN VARIABLE
+print("Common: \n",com_words)
 # print(txt)
 
 
