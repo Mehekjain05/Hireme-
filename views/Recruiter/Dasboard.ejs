@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width,
 				initial-scale=1.0">
     <title>Recruitor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
 <style>
@@ -28,7 +30,7 @@
         --background-color4: #cad7fda4;
         --primary-color: #4b49ac;
         --secondary-color: #0c007d;
-        --Border-color: #3f0097;
+        --Border-color: white;
         --one-use-color: #3f0097;
         --two-use-color: #5500cb;
     }
@@ -316,7 +318,7 @@
     }
 
     .recent-Articles {
-        font-size: 30px;
+        font-size: 20px;
         font-weight: 600;
         color: #e3bc9a;
     }
@@ -581,13 +583,6 @@
             <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182541/Untitled-design-(30).png"
                 class="icn menuicn" id="menuicn" alt="menu-icon">
         </div>
-        <div class="message">
-            <div class="circle"></div>
-            <div class="dp">
-                <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210180014/profile-removebg-preview.png"
-                    class="dpicn" alt="dp">
-            </div>
-        </div>
 
     </header>
 
@@ -596,45 +591,26 @@
             <nav class="nav">
                 <div class="nav-upper-options">
                     <div class="nav-option option1">
-                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210182148/Untitled-design-(29).png"
-                            class="nav-img" alt="dashboard">
-                        <h3> Job 0</h3>
-                    </div>
-
-                    <div class="option2 nav-option">
-                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183322/9.png"
-                            class="nav-img" alt="articles">
-                        <h3> Articles</h3>
-                    </div>
-
-                    <div class="nav-option option3">
-                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/5.png"
-                            class="nav-img" alt="report">
-                        <h3> Report</h3>
-                    </div>
-
-                    <div class="nav-option option4">
-                        <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/6.png"
-                            class="nav-img" alt="institution">
-                        <h3> Institution</h3>
+                        <img src="https://p.kindpng.com/picc/s/41-415494_profile-picture-in-circle-hd-png-download.png"
+                            style=" width: 80px; height: 80px; margin-left: 25px;" alt="dashboard">
                     </div>
 
                     <div class="nav-option option5">
                         <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183323/10.png"
                             class="nav-img" alt="blog">
-                        <h3> Profile</h3>
+                        <h5> Profile</h5>
                     </div>
 
                     <div class="nav-option option6">
                         <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183320/4.png"
                             class="nav-img" alt="settings">
-                        <h3> Settings</h3>
+                        <h5> Settings</h5>
                     </div>
 
                     <div class="nav-option logout">
                         <img src="https://media.geeksforgeeks.org/wp-content/uploads/20221210183321/7.png"
                             class="nav-img" alt="logout">
-                        <h3>Logout</h3>
+                        <h5>Logout</h5>
                     </div>
 
                 </div>
@@ -691,88 +667,42 @@
                 </div>
             </div>
 
-            <div class="report-container">
-                <div class="report-header">
-                    <h1 class="recent-Articles">Recent Articles</h1>
-                    <button class="view">View All</button>
-                </div>
-
-                <div class="report-body">
-                    <div class="report-topic-heading">
-                        <h3 class="t-op">Article</h3>
-                        <h3 class="t-op">Views</h3>
-                        <h3 class="t-op">Comments</h3>
-                        <h3 class="t-op">Status</h3>
+            <div class="report-container " style="display: flex;">
+                <div class="card" style="width: 18rem; margin-left:15px; margin-right:15px; margin-top:15px; margin-bottom:15px; box-shadow: 1px 1px 3px rgba(0, 30, 87, 0.751); ">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Scientist</h5>
+                        <p class="card-text">Get Placed as a Data Scientist With Salary of 2-3 LPA at Bangalore.</p>
                     </div>
-
-                    <div class="items">
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl">Article 73</h3>
-                            <h3 class="t-op-nextlvl">2.9k</h3>
-                            <h3 class="t-op-nextlvl">210</h3>
-                            <h3 class="t-op-nextlvl label-tag">Published</h3>
-                        </div>
-
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl">Article 72</h3>
-                            <h3 class="t-op-nextlvl">1.5k</h3>
-                            <h3 class="t-op-nextlvl">360</h3>
-                            <h3 class="t-op-nextlvl label-tag">Published</h3>
-                        </div>
-
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl">Article 71</h3>
-                            <h3 class="t-op-nextlvl">1.1k</h3>
-                            <h3 class="t-op-nextlvl">150</h3>
-                            <h3 class="t-op-nextlvl label-tag">Published</h3>
-                        </div>
-
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl">Article 70</h3>
-                            <h3 class="t-op-nextlvl">1.2k</h3>
-                            <h3 class="t-op-nextlvl">420</h3>
-                            <h3 class="t-op-nextlvl label-tag">Published</h3>
-                        </div>
-
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl">Article 69</h3>
-                            <h3 class="t-op-nextlvl">2.6k</h3>
-                            <h3 class="t-op-nextlvl">190</h3>
-                            <h3 class="t-op-nextlvl label-tag">Published</h3>
-                        </div>
-
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl">Article 68</h3>
-                            <h3 class="t-op-nextlvl">1.9k</h3>
-                            <h3 class="t-op-nextlvl">390</h3>
-                            <h3 class="t-op-nextlvl label-tag">Published</h3>
-                        </div>
-
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl">Article 67</h3>
-                            <h3 class="t-op-nextlvl">1.2k</h3>
-                            <h3 class="t-op-nextlvl">580</h3>
-                            <h3 class="t-op-nextlvl label-tag">Published</h3>
-                        </div>
-
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl">Article 66</h3>
-                            <h3 class="t-op-nextlvl">3.6k</h3>
-                            <h3 class="t-op-nextlvl">160</h3>
-                            <h3 class="t-op-nextlvl label-tag">Published</h3>
-                        </div>
-
-                        <div class="item1">
-                            <h3 class="t-op-nextlvl">Article 65</h3>
-                            <h3 class="t-op-nextlvl">1.3k</h3>
-                            <h3 class="t-op-nextlvl">220</h3>
-                            <h3 class="t-op-nextlvl label-tag">Published</h3>
-                        </div>
-
+                    <div class="card-body">
+                        <h5>Candidate Found : 12</h5>
+                        <a href="#" class="card-link">More Info</a>
                     </div>
                 </div>
+                <div class="card" style="width: 18rem; margin-left:15px; margin-right:15px; margin-top:15px;margin-bottom:15px; box-shadow: 1px 1px 3px rgba(0, 30, 87, 0.751);">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Scientist</h5>
+                        <p class="card-text">Get Placed as a Data Scientist With Salary of 2-3 LPA at Bangalore.</p>
+                    </div>
+                    <div class="card-body">
+                        <h5>Candidate Found : 12</h5>
+                        <a href="#" class="card-link">More Info</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;margin-left:15px; margin-right:15px; margin-top:15px; margin-bottom:15px; box-shadow: 1px 1px 3px rgba(0, 30, 87, 0.751);">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Scientist</h5>
+                        <p class="card-text">Get Placed as a Data Scientist With Salary of 2-3 LPA at Bangalore.</p>
+                    </div>
+                    <div class="card-body">
+                        <h5>Candidate Found : 12</h5>
+                        <a href="#" class="card-link">More Info</a>
+                    </div>
+                </div>
+
+
             </div>
         </div>
+    </div>
     </div>
 
     <script>
@@ -784,6 +714,9 @@
         })
 
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
