@@ -70,5 +70,6 @@ phone = re.search(r'(\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4})', resume_text).group()
 print('Name:', name)
 print('Email:', email)
 print('Phone:', phone)
+# return resume_text For HATIM
 
 
