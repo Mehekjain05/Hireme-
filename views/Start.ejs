@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<style>
+    .new {
+        animation: up-down 1s ease-in-out infinite alternate-reverse both;
+    }
+
+    @-webkit-keyframes up-down {
+        0% {
+            transform: translateY(10px);
+        }
+
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+
+    @keyframes up-down {
+        0% {
+            transform: translateY(10px);
+        }
+
+        100% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .set:hover {
+        text-decoration: underline;
+    }
+
+    .dis:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<body>
+    <div>
+        <div style="display: flex; flex-direction: row; align-items:center; font-size:larger">
+            <div style="display: flex;flex-direction: row; align-items:center; margin-left:50px;">
+                <img src="/img/logo.png" style="width: 60px; margin-right:35px; margin-top:30px; " />
+                <div style="margin-right: 20px; margin-top:30px;">Hire <a> Genius</a></div>
+            </div>
+            <div style="display: flex; flex-direction: row; margin-top:30px; margin-left:17rem;">
+                <div style="margin-right:40px;" class="set">Home</div>
+                <div style="margin-right:40px;" class="set">About</div>
+                <div style="margin-right:40px;" class="set">Services</div>
+                <div style="margin-right:40px;" class="set">Contact Us</div>
+            </div>
+
+            <div style="display: flex; flex-direction: row; align-items:center; margin-left:13rem;  margin-top:30px; ">
+                <a href="" style="text-decoration: none;">
+                    <div style="margin-right:60px;" class="dis">Sign Up</div>
+                </a>
+                <a href="" style="text-decoration: none;">
+                    <div style="margin-right:40px;" class="dis">Sign In</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section style="display: flex; flex-direction: row; align-items:center;">
+        <div style="margin-right: 140px; width:40rem; margin-left:90px;">
+            <h1 style="font-size:3.5rem"><a style="color: blueviolet;">Attain the ideal </a> role within the company
+            </h1>
+            <p style="font-size: larger; margin-top:8px;color: blueviolet;">
+                Secure the optimal position within the company through
+                successful job application and interview processes.</p>
+            <button class="dis"
+                style="background-color:blueviolet; width:200px; font-size:larger;border-radius:50px; height:32px;color: white;margin-top:8px;">Get
+                Started</button>
+        </div>
+        <div className='margin-left:80px;'>
+            <img src=/img/hire.jpg class="new" style="width:20rem;" />
+        </div>
+
+    </section>
+</body>
+
+</html>
