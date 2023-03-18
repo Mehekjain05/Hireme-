@@ -1,19 +1,14 @@
 {
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "crypto": "^1.0.1",
+    "config": "^3.3.9",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "firebase": "^9.18.0",
-    "gridfs-stream": "^1.1.1",
-    "method-override": "^3.0.0",
     "mongoose": "^7.0.2",
-    "multer": "^1.4.4",
-    "multer-gridfs-storage": "^5.0.2",
-    "nodemon": "^2.0.21",
-    "path": "^0.12.7"
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^2.0.21"
   },
   "name": "hireme-",
   "version": "1.0.0",
@@ -23,5 +18,13 @@
   },
   "author": "code omega",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mehekjain05/Hireme-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mehekjain05/Hireme-/issues"
+  },
+  "homepage": "https://github.com/Mehekjain05/Hireme-#readme",
   "description": ""
 }
