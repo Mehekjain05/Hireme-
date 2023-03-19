@@ -68,5 +68,22 @@ router.get('/logout', (req, res) => {
 router.get('/dashboard', (req, res) => {
     res.render("Recruiter/Dasboard",{name: req.session.name})
 })
+router.get('/step1', (req, res) => {
+    res.render("Recruiter/Registration/step1",{name: req.session.name})
+})
+router.get('/step2', (req, res) => {
+    res.render("Recruiter/Registration/step2",{name: req.session.name})
+})
+router.get('/step3', (req, res) => {
+    res.render("Recruiter/Registration/step3",{name: req.session.name})
+})
+router.get('/finalstep', (req, res) => {
+    res.render("Recruiter/Registration/finalstep",{name: req.session.name})
+})
+
+router.get('/roles', (req, res) => {
+    res.render("Recruiter/Roles",{name: req.session.name})
+})
+
 
 module.exports = router
