@@ -1,6 +1,6 @@
 def SkillSet():
     data = {}
-    with open('\DATA\data.txt') as f:
+    with open('/DATA/KeyW.txt') as f:
         lines = f.readlines()
         i = 0
         while i < len(lines):
@@ -14,7 +14,7 @@ def SkillSet():
             i += 1
     keywords = list(data.values())
     txt=""
-    with open('\DATA\Data_Resume.txt') as f:
+    with open('/DATA/Data_Resume.txt') as f:
         lines = f.readlines()
         txt=txt.join(lines)
 
