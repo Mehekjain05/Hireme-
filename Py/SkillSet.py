@@ -1,6 +1,6 @@
 def SkillSet():
     data = {}
-    with open('/DATA/KeyW.txt') as f:
+    with open('Py/DATA/KeyW.txt') as f:
         lines = f.readlines()
         i = 0
         while i < len(lines):
@@ -14,7 +14,7 @@ def SkillSet():
             i += 1
     keywords = list(data.values())
     txt=""
-    with open('/DATA/Data_Resume.txt') as f:
+    with open('Py/DATA/Data_Resume.txt') as f:
         lines = f.readlines()
         txt=txt.join(lines)
 
@@ -31,5 +31,9 @@ def SkillSet():
 
 
     com_words=common_words(txt, txt2)
-    return com_words
-SkillSet()
+    str1 = " "
+    # return string 
+    return (str1.join(com_words))
+x=SkillSet()
+print(x)
+
