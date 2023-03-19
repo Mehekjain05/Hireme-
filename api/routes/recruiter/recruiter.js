@@ -3,6 +3,8 @@ const router = express.Router()
 const mongoose = require('mongoose')
 const Appl = require("../../models/applicant/applicant")
 const Recruiter = require("../../models/Recruiter/Recruiter")
+const Post = require("../../models/Recruiter/post")
+
 
 
 router.get('/login', async(req, res) => {
@@ -71,6 +73,11 @@ router.get('/dashboard', (req, res) => {
 router.get('/step1', (req, res) => {
     res.render("Recruiter/Registration/step1",{name: req.session.name})
 })
+
+router.post('/step1', (req, res) => {
+    res.render("Recruiter/Registration/step1",{name: req.session.name})
+})
+
 router.get('/step2', (req, res) => {
     res.render("Recruiter/Registration/step2",{name: req.session.name})
 })
@@ -81,7 +88,17 @@ router.get('/finalstep', (req, res) => {
     res.render("Recruiter/Registration/finalstep",{name: req.session.name})
 })
 
-router.get('/roles', (req, res) => {
+router.get('/roles', async(req, res) => {
+    const user = new Recruiter({
+            _id: new mongoose.Types.ObjectId(),
+            email: req.body.email,
+            username: req.body.username,
+            post: req.body.post,
+            company_name: req.body.company_name,
+            mobile: req.body.mob,
+            pass: req.body.pass
+        })
+        await user.save()
     res.render("Recruiter/Roles",{name: req.session.name})
 })
 
