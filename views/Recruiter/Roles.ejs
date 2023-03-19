@@ -636,8 +636,10 @@
             </nav>
         </div>
         <div class="main">
-            <h1 style="color: purple; margin-bottom:20px">Add Roles</h1>
-            <input type="text" id="task" placeholder="Required Skills" />
+            <h3 style="color: purple; margin-bottom:20px">Company Position</h3>
+            <input class="form-control" type="text" placeholder="Position" aria-label="position">
+
+            <input type="text" id="task" placeholder="Required Skills" style="margin-top:20px"/>
             <button type="button" class="btn btn-outline-secondary" onclick="addTask()">+</button>
             <ul id="taskList">
             </ul>
@@ -674,17 +676,17 @@
             </script>
             </ul>
 
-            <h1 style="color: purple; margin-bottom:20px">Expected Salary</h1>
+            <h3 style="color: purple; margin-bottom:20px">Expected Salary</h3>
             <label for="first-name">Min - Max Range</label>
             <div style="margin-bottom:20px;">
                 <input type="text" class="form-control" id="min" placeholder="min"
                     style="width: 200px; margin-bottom:10px;">
                 <input type="text" class="form-control" id="max" placeholder="max" style="width: 200px;">
             </div>
-            <h1 style="color: purple; margin-bottom:20px">Years of Experience</h1>
+            <h3 style="color: purple; margin-bottom:20px">Years of Experience</h3>
             <input class="form-control" type="text" placeholder="Experience" aria-label="Experience">
 
-            <h1 style="color: purple; margin-top:20px">Location</h1>
+            <h3 style="color: purple; margin-top:20px">Location</h3>
             <div class="dropdown" style="margin-top:20px;">
                 <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
