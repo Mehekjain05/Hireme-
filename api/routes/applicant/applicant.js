@@ -24,7 +24,7 @@ router.get('/step1/(:type)', (req, res) => {
         res.render("applicant/steps/step1")
     }
     else{
-        res.send("Resgister Recruiter!!!")
+        res.render("Recruiter/Registration/step1")
     }
 })
 
