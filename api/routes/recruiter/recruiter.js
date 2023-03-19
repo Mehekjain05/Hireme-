@@ -69,4 +69,9 @@ router.get('/dashboard', (req, res) => {
     res.render("Recruiter/Dasboard",{name: req.session.name})
 })
 
+router.get('/roles', (req, res) => {
+    res.render("Recruiter/Roles",{name: req.session.name})
+})
+
+
 module.exports = router
