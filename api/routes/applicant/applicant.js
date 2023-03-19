@@ -13,6 +13,7 @@ router.get('/login', (req, res) => {
 })
 
 router.get('/step1/(:type)', (req, res) => {
+    console.log(req.params.type)
     if (req.params.type == 'user') {
         res.render("applicant/steps/step1")
     }
