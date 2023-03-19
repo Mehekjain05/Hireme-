@@ -13,16 +13,12 @@ router.get('/login', (req, res) => {
 })
 
 router.get('/step1/(:type)', (req, res) => {
+    console.log(req.params.type)
     if (req.params.type == 'user') {
         res.render("applicant/steps/step1")
     }
-<<<<<<< HEAD
     else{
         res.render("Recruiter/Registration/step1")
-=======
-    else {
-        res.send("Resgister Recruiter!!!")
->>>>>>> 891d62ba07ef2e9c9f3fdaaffd0fc73d41086515
     }
 })
 
