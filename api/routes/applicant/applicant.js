@@ -24,7 +24,6 @@ router.get('/step1/(:type)', (req, res) => {
 
 
 router.post('/step1', async (req, res) => {
-    console.log("ye run kyu nhi ho raha")
     const user = new Applicant({
         _id: new mongoose.Types.ObjectId(),
         email: req.body.email,
@@ -43,33 +42,11 @@ router.get('/step2', (req, res) => {
 
 router.post('/step2', (req, res) => {
     res.redirect("/applicant/step3");
-    // mongoose.connect('mongodb+srv://hatim:hatim@cluster0.f7or37n.mongodb.net/?retryWrites=true&w=majority');
-    // const pdfSchema = new mongoose.Schema({
-    //     name: String,
-    //     data: Buffer
-    // });
-    // const Pdf = mongoose.model('Pdf', pdfSchema);
-    // const filePath = path.join(__dirname, 'cv-final.pdf');
-    // const pdfBuffer = fs.readFileSync(filePath);
-    // const newPdf = new Pdf({
-    //     name: 'My PDF File',
-    //     data: pdfBuffer
-    // });
-    // newPdf.save((err, savedPdf) => {
-    //     if (err) {
-    //         console.error(err);
-    //     } else {
-    //         console.log('PDF file saved to database:', savedPdf);
-    //     }
-    // });
 });
 
 router.get('/step3', (req, res) => {
     const pythonProcess = spawn('python', ['Py/SkillSet.py']);
     pythonProcess.stdout.on('data', (data) => {
-        // data.forEach(element => {
-        //     console.log(element)
-        // });
         const myArray = data.toString().split(" ");
         console.log(myArray)
         res.render("applicant/steps/step3",{data: myArray})
@@ -86,6 +63,5 @@ router.get('/step3', (req, res) => {
     });
     
 })
-
 
 module.exports = router
