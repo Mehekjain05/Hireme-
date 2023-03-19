@@ -12,7 +12,7 @@ def SkillSet():
                 i += 1
             data[key] = s.split(',')
             i += 1
-
+    keywords = list(data.values())
     txt=""
     with open('\DATA\Data_Resume.txt') as f:
         lines = f.readlines()
@@ -32,3 +32,4 @@ def SkillSet():
 
     com_words=common_words(txt, txt2)
     return com_words
+SkillSet()
