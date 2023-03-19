@@ -1,5 +1,5 @@
 data = {}
-with open('C:\Vedant_\Projects\SmartHire\DATA\data.txt') as f:
+with open('Py/DATA/KeyW.txt') as f:
     lines = f.readlines()
     i = 0
     while i < len(lines):
@@ -23,7 +23,7 @@ keywords = list(data.values())
 # print(keywords)
 
 txt=""
-with open('C:\Vedant_\Projects\SmartHire\DATA\Data_Resume.txt') as f:
+with open('Py/DATA/Data_Resume.txt') as f:
     lines = f.readlines()
     txt=txt.join(lines)
     # for i in range(len(keywords)):
@@ -103,5 +103,4 @@ percentage = candidate_words / total_words * 100
 print(highest_count_key," ",counts[highest_count_key])
 print(second_highest_count_key," ",counts[second_highest_count_key])
 print(percentage)
-
 
