@@ -79,29 +79,47 @@ job_req=['python','RDBMS','cloud']
 #
 # print(highest_count_key)
 
+for key in data:
+    data[key] = [value.lower().strip() for value in data[key]]
+print(data)
 # Initialize a dictionary to keep track of the counts for each key
 counts = {key: 0 for key in data.keys()}
 
 # Loop through the common words and increment the count for each key
 for word in com_words:
+    print(word)
     for key in data.keys():
+
         if word in data[key]:
+            print("key:",key)
             counts[key] += 1
 
 # Find the key with the highest count
 highest_count_key = max(counts, key=counts.get)
-
+print(type(highest_count_key))
 # Find the key with the second-highest count
-second_highest_count_key = max(key for key in counts.keys() if key != highest_count_key and counts[key] == max(counts.values()))
+try:
+    second_highest_count_key = max(key for key in counts.keys() if key != highest_count_key and counts[key] == max(counts.values()))
+    # Calculate the percentage of the domain that the candidate belongs to
+    total_words = sum(len(word_list) for word_list in data.values())
+    candidate_words = sum(len(data[key]) for key in counts.keys() if counts[key] > 0)
+    percentage = candidate_words / total_words * 100
 
-# Calculate the percentage of the domain that the candidate belongs to
-total_words = sum(len(word_list) for word_list in data.values())
-candidate_words = sum(len(data[key]) for key in counts.keys() if counts[key] > 0)
-percentage = candidate_words / total_words * 100
+    # Print the results
+    print(highest_count_key, " ", counts[highest_count_key])
+    print(second_highest_count_key, " ", counts[second_highest_count_key])
+    print(percentage)
+except:
+    print("No Second Highest")
+    # Calculate the percentage of the domain that the candidate belongs to
+    total_words = sum(len(word_list) for word_list in data.values())
+    candidate_words = sum(len(data[key]) for key in counts.keys() if counts[key] > 0)
+    percentage = candidate_words / total_words * 100
 
-# Print the results
-print(highest_count_key," ",counts[highest_count_key])
-print(second_highest_count_key," ",counts[second_highest_count_key])
-print(percentage)
+    # Print the results
+    print(highest_count_key, " ", counts[highest_count_key])
+    # print(second_highest_count_key, " ", counts[second_highest_count_key])
+    print(percentage)
+
 
 
