@@ -5,7 +5,23 @@ const Applicant = require("../../models/applicant/applicant")
 const multer = require("multer")
 const fs = require("fs");
 const path = require('path');
-require("firebase/storage");
+// require("firebase/storage");
+
+const { spawn } = require('child_process');
+const pythonProcess = spawn('python', ['Py/SkillSet.py']);
+
+pythonProcess.stdout.on('data', (data) => {
+  console.log(`Python script output: ${data}`);
+});
+
+pythonProcess.stderr.on('data', (data) => {
+  console.error(`Error in Python script: ${data}`);
+});
+
+pythonProcess.on('close', (code) => {
+  console.log(`Python script exited with code ${code}`);
+});
+
 // const firebase = require('../../utils/firebase');
 // const storage = firebase.storage().ref();
 // const store = multer.memoryStorage();
